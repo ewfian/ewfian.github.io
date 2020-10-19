@@ -42,16 +42,8 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        run: |
-          git config --list
-          git status
-          ls
-          ls public
-          git checkout --orphan gh-pages
-          git branch -v -a
-          git add -f public
-          git status
-          if [[ -n $(git status -s public) ]] ; then git commit -nm "Auto Publish" ; else echo "No changes detected"; fi
-          git status
-          git push -f origin gh-pages
-        
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
