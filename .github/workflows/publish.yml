@@ -49,5 +49,5 @@ jobs:
           publish_branch: gh-pages
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          cname: ewfian.com
+          cname: ack.moe
           force_orphan: true
