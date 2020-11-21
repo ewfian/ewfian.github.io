@@ -1,0 +1,6 @@
+node_sass:
+  debug: false
+  outputStyle: expanded
+  precision: 5
+  sourceComments: false
+  indentWidth: 2
