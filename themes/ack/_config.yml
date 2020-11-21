@@ -1,3 +1,10 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  Links: /links
+  About: /about/me
+  
 node_sass:
   debug: false
   outputStyle: expanded

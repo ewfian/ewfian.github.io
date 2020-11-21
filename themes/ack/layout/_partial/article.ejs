@@ -4,8 +4,15 @@
     <div class="article-inner">
         <header class="article-header">
         </header>
-        <div class="article-entry" itemprop="articleBody">
-            <%- post.content %>
+        <div class="article-content" itemprop="articleBody">
+            <% if (post.excerpt && is_home()) { %>
+                <%- post.excerpt %>
+                <div class="read-more">
+                    <a href="<%- url_for(post.path) %>#more" class="read-more-link"><%= __('posts.readmore') %></a>
+                </div>
+              <% } else { %>
+                <%- post.content %>
+              <% } %>
         </div>
         <footer class="article-footer">
         </footer>

@@ -1,0 +1,13 @@
+menu:
+  home: Home
+  archives: Archives
+  tags: Tags
+  categories: Categories
+  links: Links
+  about: About
+
+posts:
+  readmore: Read more..
+
+footer:
+  powered: "Powered by %s"

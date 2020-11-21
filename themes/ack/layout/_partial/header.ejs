@@ -1,0 +1,10 @@
+<nav class="site-navbar">
+    <ul id="menu" class="menu">
+    <% for (var i in theme.menu){ %>
+        <li class="menu-item">
+            <a class="menu-item-link" href="<%- url_for(theme.menu[i]) %>"><%= __('menu.' + i.toLowerCase()) %></a>
+        </li>
+    <% } %>
+    </ul>
+  </nav>
+  
