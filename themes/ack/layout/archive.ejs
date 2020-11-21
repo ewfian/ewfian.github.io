@@ -1,1 +1,27 @@
-<%- list_posts() %>
+<% var last; %>
+<% page.posts.each(function(post, i){ %>
+  <% var year = post.date.year(); %>
+  <% if (last != year){ %>
+    <% if (last != null){ %>
+      </div></section>
+    <% } %>
+    <% last = year; %>
+    <section class="archives-wrap">
+      <div class="archive-year-wrap">
+        <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+      </div>
+      <div class="archives">
+  <% } %>
+  <article class="archive-article archive-type-<%= post.layout %>">
+    <div class="archive-article-inner">
+      <header class="archive-article-header">
+        <%- partial('_partial/_post/date', {post: post, class_name: 'archive-article-date', date_format: 'MMM D'}) %>
+        <%- partial('_partial/_post/title', {post: post, class_name: 'archive-article-title'}) %>
+      </header>
+    </div>
+  </article>
+<% }) %>
+<% if (page.posts.length){ %>
+  </div></section>
+<% } %>
+<%- partial('_partial/pagination') %>

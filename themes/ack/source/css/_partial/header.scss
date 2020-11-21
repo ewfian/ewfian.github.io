@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+
+    .site-navbar .menu {
+        padding: 0;
+
+        .menu-item {
+            list-style-type: none;
+            display: inline-block;
+        }
+    }
+
+    .menu-item-link {
+        text-decoration: none;
+    }
+}

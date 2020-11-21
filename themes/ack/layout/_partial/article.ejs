@@ -1,8 +1,12 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-    <div class="article-meta">
-    </div>
     <div class="article-inner">
         <header class="article-header">
+            <div class="article-title">
+                <%- partial('_post/title', {class_name: 'article-title'}) %>
+            </div>
+            <div class="article-meta">
+                <%- partial('_post/date', {class_name: 'article-date', date_format: null}) %>
+            </div>
         </header>
         <div class="article-content" itemprop="articleBody">
             <% if (post.excerpt && is_home()) { %>

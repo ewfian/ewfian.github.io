@@ -16,3 +16,14 @@ body {
     line-height: $global-lineheight;
     scroll-behavior: smooth;
 }
+
+.container {
+    margin: 0 auto;
+    width: $global-body-width;
+}
+
+@include max-screen() {
+    .container {
+        padding: 0 1rem;
+    }
+}
