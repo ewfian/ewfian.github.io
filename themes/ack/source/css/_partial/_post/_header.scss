@@ -4,6 +4,10 @@
     .article-title {
         margin: 0;
         font-size: 2rem;
+
+        .article-link {
+            text-decoration: none;
+        }
     }
 
     .article-meta {

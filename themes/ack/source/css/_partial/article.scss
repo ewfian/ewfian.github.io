@@ -14,3 +14,10 @@
     @import "_post/copyright";
     @import '_post/footer';
 }
+
+.pagination {
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    @include border-1px("top", solid, $color-light-gray);
+}

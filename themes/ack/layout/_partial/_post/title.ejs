@@ -2,14 +2,14 @@
   <h1 class="article-title" itemprop="name">
     <a class="article-link" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
   </h1>
-<% } else if (post.title){ %>
+<% } else { %>
   <% if (!is_post()) { %>
     <h1 class="article-title" itemprop="name">
-      <a class="article-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      <a class="article-link" href="<%- url_for(post.path) %>"><%= post.title || __("posts.untitled") %></a>
     </h1>
   <% } else { %>
     <h1 class="article-title" itemprop="name">
-      <%= post.title %>
+      <%= post.title || __("posts.untitled") %>
     </h1>
   <% } %>
 <% } %>

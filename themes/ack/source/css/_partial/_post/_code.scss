@@ -73,6 +73,10 @@ pre {
             overflow-x: auto;
             display: block;
         }
+
+        .marked {
+            background: $color-light-gray;
+        }
     }
 
     &::before {

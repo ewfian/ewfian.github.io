@@ -1,3 +1,5 @@
+archive_a: Archives
+
 menu:
   home: Home
   archives: Archives
@@ -12,6 +14,7 @@ posts:
   prev_post: Prev
   next_post: Next
   readmore: Read more..
+  untitled: Untitled
 
 copyright:
   author: 'Author'

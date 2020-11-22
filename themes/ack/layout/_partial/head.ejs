@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%
-        var title = page.title;
+        var title = page.title || __("posts.untitled");
 
         if (is_archive()) {
             title = __('archive_a');

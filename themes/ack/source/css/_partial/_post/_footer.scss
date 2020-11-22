@@ -53,8 +53,8 @@
 }
 
 @include max-screen() {
-    .post-footer {
-        .post-nav {
+    .article-footer {
+        .article-nav {
             .nav-default {
                 display: none;
             }
