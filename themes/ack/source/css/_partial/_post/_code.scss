@@ -1,0 +1,190 @@
+$language-map: (
+    html: "HTML",
+    js: "JavaScript",
+    javascript: "JavaScript",
+    bash: "Bash",
+    css: "CSS",
+    scss: "Scss",
+    java: "Java",
+    xml: "XML",
+    python: "Python",
+    json: "JSON",
+    swift: "Swift",
+    ruby: "Ruby",
+    php: "PHP",
+    c: "C",
+    cpp: "C++",
+    scheme: "Scheme",
+    objectivec: "Objective-C",
+    yml: "YAML",
+    stylus: "Stylus",
+    sql: "SQL",
+    http: "HTTP",
+    go: "Go",
+    kotlin: "Kotlin",
+    plain: "Plain",
+    rust: "Rust",
+    cs: "C#",
+    ini: "INI",
+    makefile: "Makefile",
+) !default;
+
+code,
+pre {
+    font-size: 0.8em;
+    margin: 0;
+    font-family: Consolas, "Roboto Mono", Monaco, monospace, courier;
+}
+
+.highlight {
+    position: relative;
+    margin: 1em 0;
+    line-height: 1.2rem;
+    background-color: rgba($theme-color, 0.05);
+
+    table {
+        table-layout: fixed;
+        overflow-wrap: break-word;
+        margin: 0;
+    }
+
+    tr,
+    td {
+        border-collapse: collapse;
+        margin: 0;
+        padding: 1rem 0 0.5rem 0;
+        line-height: 1.25rem;
+    }
+
+    td.gutter {
+        width: 1.5rem;
+        color: $color-light-gray;
+        white-space: nowrap;
+        vertical-align: top;
+
+        pre {
+            padding: 0 0.375rem;
+        }
+    }
+
+    td.code {
+        pre {
+            padding-left: 0.5rem;
+            overflow-x: auto;
+            display: block;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $color-gray;
+        text-align: right;
+        font-size: 0.75em;
+        padding: 0.25rem 0.5rem 0;
+        line-height: 1rem;
+        height: 1rem;
+        font-weight: 600;
+        content: "Code";
+    }
+
+    @each $sign, $text in $language-map {
+        &.#{$sign}::before {
+            content: $text;
+        }
+    }
+
+    figcaption {
+        height: 1.5rem;
+
+        span {
+            margin: 0 1rem 0 0.5rem;
+        }
+    }
+}
+
+pre {
+    color: #525252;
+    .function .keyword,
+    .constant {
+        color: #0092db;
+    }
+    .keyword,
+    .attribute {
+        color: #e96900;
+    }
+    .number,
+    .literal {
+        color: #ae81ff;
+    }
+    .tag,
+    .tag .title,
+    .change,
+    .winutils,
+    .flow,
+    .lisp .title,
+    .clojure .built_in,
+    .nginx .title,
+    .tex .special {
+        color: #2973b7;
+    }
+    .symbol,
+    .symbol .string,
+    .value,
+    .regexp {
+        color: #42b983;
+    }
+    .title {
+        color: #83b917;
+    }
+    .tag .value,
+    .string,
+    .subst,
+    .haskell .type,
+    .preprocessor,
+    .ruby .class .parent,
+    .built_in,
+    .sql .aggregate,
+    .django .template_tag,
+    .django .variable,
+    .smalltalk .class,
+    .javadoc,
+    .django .filter .argument,
+    .smalltalk .localvars,
+    .smalltalk .array,
+    .attr_selector,
+    .pseudo,
+    .addition,
+    .stream,
+    .envvar,
+    .apache .tag,
+    .apache .cbracket,
+    .tex .command,
+    .prompt {
+        color: #42b983;
+    }
+    .comment,
+    .java .annotation,
+    .python .decorator,
+    .template_comment,
+    .pi,
+    .doctype,
+    .shebang,
+    .apache .sqbracket,
+    .tex .formula {
+        color: #b3b3b3;
+    }
+    .deletion {
+        color: #ba4545;
+    }
+    .coffeescript .javascript,
+    .javascript .xml,
+    .tex .formula,
+    .xml .javascript,
+    .xml .vbscript,
+    .xml .css,
+    .xml .cdata {
+        opacity: 0.5;
+    }
+}
