@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%- partial('google-analytics') %>
     <%
-        var title = page.title || __("posts.untitled");
+        var title = page.title;
 
         if (is_archive()) {
             title = __('archive_a');
