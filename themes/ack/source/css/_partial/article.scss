@@ -1,0 +1,16 @@
+.posts {
+    margin-bottom: 1rem;
+}
+
+.article {
+    padding: 1rem;
+
+    & + .article {
+        @include border-1px("top", solid, $color-dark-gray);
+    }
+
+    @import "_post/header";
+    @import "_post/content";
+    @import "_post/copyright";
+    @import '_post/footer';
+}

@@ -1,16 +1,19 @@
 .header {
     display: flex;
+    margin-left: 2rem;
 
     .site-navbar .menu {
         padding: 0;
+        display: flex;
 
         .menu-item {
             list-style-type: none;
-            display: inline-block;
+            margin-right: 1rem;
         }
     }
 
     .menu-item-link {
         text-decoration: none;
+        font-weight: bold;
     }
 }

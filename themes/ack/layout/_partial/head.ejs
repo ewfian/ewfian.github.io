@@ -7,10 +7,10 @@
         if (is_archive()) {
             title = __('archive_a');
 
-            if (is_month()){
-            title += ': ' + page.year + '/' + page.month;
+            if (is_month()) {
+                title += ': ' + page.year + '/' + page.month;
             } else if (is_year()) {
-            title += ': ' + page.year;
+                title += ': ' + page.year;
             }
         } else if (is_category()) {
             title = __('category') + ': ' + page.category;

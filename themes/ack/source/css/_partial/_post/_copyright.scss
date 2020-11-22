@@ -1,0 +1,16 @@
+.article-copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    @include border-1px("top", dashed, $color-light-gray);
+
+    .copyright-item {
+        margin: 0.5rem 0;
+        word-break: normal;
+        white-space: pre-warp;
+        word-wrap: break-word;
+
+        a {
+            color: $theme-color;
+        }
+    }
+}

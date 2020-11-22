@@ -7,7 +7,16 @@ menu:
   about: About
 
 posts:
+  prev: Prev
+  next: Next
+  prev_post: Prev
+  next_post: Next
   readmore: Read more..
+
+copyright:
+  author: 'Author'
+  link: 'Link'
+  license: 'License'
 
 footer:
   powered: "Powered by %s"

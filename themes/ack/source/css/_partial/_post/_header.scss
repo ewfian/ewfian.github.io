@@ -1,0 +1,22 @@
+.article-header {
+    margin-bottom: 20px;
+
+    .article-title {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .article-meta {
+        .article-date {
+            font-size: 1rem;
+            color: $color-dark-gray;
+        }
+    }
+}
+
+.article-gallery {
+    img {
+        display: inline-block;
+        max-width: 100%;
+    }
+}

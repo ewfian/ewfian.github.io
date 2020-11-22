@@ -1,8 +1,8 @@
 <% var last; %>
-<% page.posts.each(function(post, i){ %>
+<% page.posts.each(function(post, i) { %>
   <% var year = post.date.year(); %>
-  <% if (last != year){ %>
-    <% if (last != null){ %>
+  <% if (last != year) { %>
+    <% if (last != null) { %>
       </div></section>
     <% } %>
     <% last = year; %>
@@ -21,7 +21,7 @@
     </div>
   </article>
 <% }) %>
-<% if (page.posts.length){ %>
+<% if (page.posts.length) { %>
   </div></section>
 <% } %>
 <%- partial('_partial/pagination') %>
