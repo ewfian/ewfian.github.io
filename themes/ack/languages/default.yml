@@ -16,6 +16,12 @@ posts:
   readmore: Read more..
   untitled: Untitled
 
+counter:
+  archives:
+    zero: No Posts
+    one: 1 Post
+    other: "%d Posts In Total"
+
 copyright:
   author: 'Author'
   link: 'Link'

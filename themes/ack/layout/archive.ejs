@@ -1,4 +1,20 @@
 <section id="archive" class="archive">
+  <% if (page.tag) { %>
+  <div class="archive-title tag">
+    <h2 class="archive-name"><%= __('menu.tags') %></h2>
+    <span class="archive-subname"><%= page.tag %></span>
+  </div>
+  <% } else if (page.category) { %>
+  <div class="archive-title category">
+    <h2 class="archive-name"><%= __('menu.categories') %></h2>
+    <span class="archive-subname"><%= page.category %></span>
+  </div>
+  <% } else { %>
+  <div class="archive-title">
+    <h2 class="archive-name"><%= __('menu.archives') %></h2>
+    <span class="archive-subname archive-post-counter"><%= _p("counter.archives", site.posts.length) %></span>
+  </div>
+  <% } %>
   <% var groupedYear %>
   <% page.posts.each(function(post, i) { %>
     <% var year = post.date.year(); %>
