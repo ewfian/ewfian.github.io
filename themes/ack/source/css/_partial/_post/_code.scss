@@ -52,17 +52,18 @@ pre {
     td {
         border-collapse: collapse;
         margin: 0;
-        padding: 1rem 0 0.5rem 0;
+        padding: 1rem 0 0 0;
         line-height: 1.25rem;
     }
 
     td.gutter {
-        width: 1.625rem;
+        width: 1.75rem;
         color: $color-light-gray;
         background-color: rgba($theme-color, 0.08);
         white-space: nowrap;
         vertical-align: top;
         user-select: none;
+        border: none;
 
         pre {
             padding: 0 0.375rem;
@@ -76,6 +77,7 @@ pre {
 
         pre {
             padding-left: 0.5rem;
+            padding-bottom: 0.5rem;
             overflow-x: auto;
             display: block;
         }

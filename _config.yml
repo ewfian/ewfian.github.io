@@ -100,4 +100,21 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: ack
 
+markdown:
+  render:
+    html: true
+    typographer: false
+    breaks: false
+    linkify: false
+  anchors:
+    permalink: true
+    level: 1
+    case: 1
+    permalinkSymbol: '#' #¶
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-mark
+    - markdown-it-emoji
+    - markdown-it-task-checkbox
+
 google_analytics: G-WQYTG1HGED
