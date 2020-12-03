@@ -1,8 +1,12 @@
 @import "_common/_normalize";
 
 html {
-    font-size: $global-font-size;
+    font-size: 18px;
     box-sizing: border-box;
+
+    @include max-screen() {
+        font-size: 16px;
+    }
 }
 
 body {
@@ -22,7 +26,7 @@ body {
     margin: 0 auto;
     width: $global-body-width;
 
-    @media screen and (max-width: $global-body-width) {
+    @include max-screen() {
         width: 100%;
     }
 }
