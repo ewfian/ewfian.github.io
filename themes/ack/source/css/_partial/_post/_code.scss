@@ -34,13 +34,20 @@ code,
 pre {
     font-size: 0.8em;
     margin: 0;
-    font-family: Consolas, "Roboto Mono", Monaco, monospace, courier;
+    font-family: $monospaced-font-family;
+}
+
+code {
+    background: $color-light-gray;
+    padding: 0.1em 0.5em;
+    white-space: nowrap;
+    border-radius: 0.25rem;
 }
 
 .highlight {
     position: relative;
     margin: 1em 0;
-    line-height: 1.2rem;
+    line-height: 1.2;
 
     table {
         table-layout: fixed;
@@ -53,7 +60,7 @@ pre {
         border-collapse: collapse;
         margin: 0;
         padding: 1rem 0 0 0;
-        line-height: 1.25rem;
+        line-height: 1.25;
     }
 
     td.gutter {
@@ -98,6 +105,7 @@ pre {
         line-height: 1rem;
         height: 1rem;
         font-weight: 600;
+        font-family: $monospaced-font-family;
         content: "Code";
     }
 
